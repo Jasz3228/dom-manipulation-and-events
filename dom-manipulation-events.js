@@ -84,4 +84,39 @@
 // Adding HTML content
   // renders the HTML inside div
     // div.innerHTML = "<span>Hello World!</span>"; *** Security risks ***
-  
+
+
+// *** TOP EXAMPLE/EXERCISE ***
+  const container = document.querySelector("#container"); // <--- Reference that exists in the HTML.
+
+  const content = document.createElement("div"); // <-- Create a new div and store it in the variable content.
+
+  content.classList.add("content"); // <-- Add a class 
+  content.textContent = "This is the glorious text-content!"; // <-- And some text
+
+  container.appendChild(content); // <-- append that div to container
+
+  const redText = document.createElement("p");
+  redText.textContent = "Hey I'm red!";
+  redText.style.color = "red";
+  container.appendChild(redText);
+
+  const blueText = document.createElement("h3");
+  blueText.textContent = "I'm a blue h3!";
+  blueText.style.color = "blue";
+  container.appendChild(blueText);
+
+  const div = document.createElement("div");
+  div.style.border = "1px solid black";
+  div.style.background = "pink";
+
+  const h1 = document.createElement("h1");
+  h1.textContent = "I'm in a div";
+  div.appendChild(h1);
+
+  const p = document.createElement("p");
+  p.textContent = "ME TOO!";
+  div.appendChild(p);
+
+  container.appendChild(div)
+
