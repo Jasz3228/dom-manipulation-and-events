@@ -55,3 +55,33 @@
       // Adds several style rules
         // div.setAttribute("style", "color: blue; background: white;");
   
+        // ** When accessing a kebab-cased CSS property like background-color with JS, you will need to either use camelCase with dot notation or bracket notation. When using bracket notation, you can use either camelCase or kebab-case, but the property name must be a string. **
+
+// Editing attributes 
+  // if id exists, update it to "theDiv", else create an id with value "theDiv"
+    // div.setAttribute("id", "theDiv");
+  
+  // returns value of specified attribute, in this case "theDiv"
+    // div.getAttribute("id");
+  
+  // removes specified attribute
+    // div.removeAttribute("id");
+
+
+// Working with classes
+  // adds class "new" to your new div
+    // div.classList.add("new");
+  // removes "new" class from div
+    // div.classList.remove("new");
+  // if div doesn't have class "active" then add it, else remove it
+    // div.classList.toggle("active"); "Often standard to toggle a CSS style"
+
+
+// Adding text content
+  // creates a text node containing "Hello World!" inserts it into the div.'
+    // div.textContent = "Hello World!";
+
+// Adding HTML content
+  // renders the HTML inside div
+    // div.innerHTML = "<span>Hello World!</span>"; *** Security risks ***
+  
