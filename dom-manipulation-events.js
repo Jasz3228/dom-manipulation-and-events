@@ -142,3 +142,29 @@
   // }
 
   // const btn.addEventListener("click", alertFunction);
+
+// With a three methods we can access more information about the event by passing a parameter to the function we are calling
+ btn3.addEventListener("click", function (e) {
+    console.log(e);
+    console.log(e.target);
+    e.target.style.background = "blue"; // Turns the button blue after click
+  });
+
+// When we pass in alertFunction or function (e) {...} as an argument that is a called a callback. It is a function passed into another function as an argument.
+
+// (e) references the event itself.
+
+// Attaching listeners to groups of nodes
+  // buttons is a node list. Looks and acts like an array.
+    //  const buttons = document.querySelectorAll("button");
+    
+    //  // we use the .forEach method to iterate through each button 
+    //  buttons.forEach((button) => {
+    // // and for each one we add a "click" listener
+    //    button.addEventListener("click", () => {
+    //     alert(button.id);
+    //    });
+    //   });
+
+// USEFUL EVENTS INCLUDE:
+  // click, dblclick, keydown, keyup
