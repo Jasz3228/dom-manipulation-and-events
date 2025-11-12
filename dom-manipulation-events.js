@@ -120,3 +120,25 @@
 
   container.appendChild(div)
 
+// Event listener methods 
+
+  // Method 2
+  const btn2 = document.querySelector("#btn2");
+  btn2.onclick = () => alert("Hello World");
+
+  // Method 3
+  const btn3 = document.querySelector("#btn3");
+  btn3.addEventListener("click", () => {
+    alert("Hello World");
+  });
+
+// Method 1 on HTML file
+// All 3 methods can be use with named functions
+// Using named function can clean up your code and a good idea if you want to do something in multiple places.
+
+// Example of a named function with method 3
+  // function alertFunction() {
+    // alert("YAY! YOU DID IT!");
+  // }
+
+  // const btn.addEventListener("click", alertFunction);

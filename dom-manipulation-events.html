@@ -10,6 +10,20 @@
   
   <h1>WEBPAGE TITLE</h1>
   <div id="container"></div> 
-  
+
+  <h3>Method 1 Event listeners</h3>
+  <button onclick="alert('Hello World')">Click Me</button>
+  <!-- This solution is not ideal because we are cluttering our HTML with JS
+   Also only one "onclick" can be set per DOM element -->
+
+   <h3>Method 2</h3>
+   <!-- JS for this method on line 123-124 of js file -->
+   <button id="btn2">Click Me</button>
+  <!-- Better, with the JS in a separate file but still the issue with the DOM element only having one "onclick property"-->
+
+  <h3>Method 3</h3>
+  <!-- See lines 130-133 of JS file -->
+  <button id="btn3">Click Me Too</button>
+   <!-- Now we maintain separation and we also allow multiple event listeners more complex to set up but more flexible and powerful. -->
 </body>
 </html>
