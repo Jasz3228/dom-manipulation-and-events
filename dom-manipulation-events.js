@@ -168,3 +168,59 @@
 
 // USEFUL EVENTS INCLUDE:
   // click, dblclick, keydown, keyup
+
+// NOTES FROM JavaScript Tutorial on events
+  // HTML -- <button id="btn">Click Me!</button>
+
+  // To define a function that executes when the button is clicked, use addEventListener() method
+
+  // JS -- let btn = document.querySelector("#btn"); <-- Select the btn with querySelector() method
+        
+        // function handleClick() { <-- define a function called handleClick()
+        //    alert("It was clicked!");
+        // }
+
+        // btn.addEventListener("click", handleClick); <-- Register a event handler when you click the display() function will execute
+
+        // Shorter way using a anonymous function
+        
+        // let btn = document.querySelector("#btn");
+        
+        // btn.addEventListener("click",function() {
+        //      alert("It was clicked!");
+        // });
+
+        // OR using a arrow function
+        
+        // let btn = document.querySelector("#btn");
+        
+        // btn.addEventListener("click",() => {
+        //      alert("It was clicked!");
+        // });
+
+// EVENT FLOW when you click the button the event can move through the page.
+
+// EVENT BUBBLING
+    // Events start at the most specific element and flow upward to the least specific.
+    // When the button is clicked event occurs in this order
+      // button, div with the id container, body, html, document
+    
+// EVENT CAPTURING 
+  // Events start at the least specific element and flow downward
+    
+// DOM LEVEL 2 EVENT FLOW
+  // Capturing phase moves from the top to bottom of page
+  // Target phase the event reaches the element that was clicked
+  // Bubbling phase the event moves back up the page
+
+// EVENT OBJECT
+  // Occurs when the browser passes an Event object to the event handler.
+    // let btn = document.querySelector("#btn");
+    
+    // btn.addEventListener("click",fucntion(event){
+    //      console.log(event.type); // "click"
+    // }); 
+
+// preventDefault() -- Stops the behavior of an event 
+
+// stopPropagation() -- Immediately stops the flow of an event, does not stop the default behavior.
