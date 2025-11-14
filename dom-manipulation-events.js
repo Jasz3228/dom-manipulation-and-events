@@ -319,3 +319,33 @@
   // Key returns the character that has been pressed
   // Code returns the physical key code
   // If you press z the event.key returns z and event.code returns KeyZ
+
+
+// --------------------- JAVASCRIPT EVENT DELEGATION ----------------------
+
+// Adding a single event handler to parent element instead of multiple event handlers
+
+// Having a large amount of event handlers on a page impact performance 
+  // Each handler is a function/object which takes up memory. 
+  // It takes time to assign all the event handlers which causes a delay
+
+// To solve you can leverage the event bubbling.
+  // Instead of multiple handlers you can assign a single event handler for all click events
+
+  // let menu = document.querySelector("#menu");
+
+  // menu.addEventListener("click", (event) => {
+  //        let target = event.target;
+  
+  //        switch(targe.id) {
+  //            case "home";
+  //                console.log("Home menu was clicked");
+  //                break;
+  //            case "dashboard":
+  //                console.log("Dashboard was clicked");
+  //                break;
+  //            case "report":
+  //                console.log("Report was clicked");
+  //                break;
+  //        }
+  // });
