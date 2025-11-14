@@ -169,7 +169,7 @@
 // USEFUL EVENTS INCLUDE:
   // click, dblclick, keydown, keyup
 
-// NOTES FROM JavaScript Tutorial on events
+// --------------- NOTES FROM JavaScript Tutorial on events ---------------
   // HTML -- <button id="btn">Click Me!</button>
 
   // To define a function that executes when the button is clicked, use addEventListener() method
@@ -217,10 +217,105 @@
   // Occurs when the browser passes an Event object to the event handler.
     // let btn = document.querySelector("#btn");
     
-    // btn.addEventListener("click",fucntion(event){
+    // btn.addEventListener("click",function(event){
     //      console.log(event.type); // "click"
     // }); 
 
 // preventDefault() -- Stops the behavior of an event 
 
 // stopPropagation() -- Immediately stops the flow of an event, does not stop the default behavior.
+
+
+// --------------- INTRODUCTION TO JAVASCRIPT MOUSE EVENTS ---------------
+
+// Mouse events fire when you use the mouse to interact with the elements on the page.
+// These events include - mousedown, mouseup, click, dblclick, mousemove, mouseover, mouseout, mouseenter, mouseleave, wheel
+
+// MOUSEDOWN, MOUSEUP, AND CLICK EVENTS
+
+  // When clicking an element there are no less than mouse events 
+    // The mousedown fires when pressed, the mouseup fires when released, the click fires when one mousedown and mouseup is detected.
+    // Element will only fire if the cursor is detected on the element for a mousedown  and mouseup
+  
+  // dblclick event
+    // Takes two click events to cause a dblclick event to fire
+  
+  // mousemove
+    // fires repeatedly whenever you move the mouse around an element.
+    // To avoid performance issues only add mousemove event handler when you need and remove it when it's not.
+  
+  // wheel event
+    // Fires when the user scrolls the mouse wheel
+      // Example - element.addEventListener("wheel", e => console.log(e.deltay));
+
+  // mouseover
+    // when the pointer enters the element -- It bubbles
+  
+  // mouseout
+    // when the pointer leaves the element -- It bubbles
+  
+  // mouseenter
+    // when the pointer enters the element itself -- Does not bubble
+  
+  // mouseleave
+    // when the pointer leaves the element itself -- Does not bubble
+
+// --------------- REGISTERING MOUSE EVENT HANDLERS ---------------
+
+// Registering a mouse event
+  
+  // first select the element by using querySelector() or getElementById()
+
+  // then register the mouse event using the addEventListener() method
+
+  // --HTML-- <button id="btn">Click Me</button>
+  
+  // --JS-- let btn = document.querySelector("#btn");
+  
+  //         btn.addEventListener("click",(event) => {
+      //          console.log("clicked");
+      //      });
+
+
+// --------------------- DETECTING MOUSE BUTTONS -------------------
+
+// The event object passed to the mouse event handler has a property called button that indicates which mouse button was pressed on the mouse to trigger the event
+
+// 0: the main mouse button, 1: the aux button is pressed usually middle or wheel, 2: the secondary button is pressed usually right mouse, 3: the fourth button is pressed browser back button, 4: the fifth button is pressed usually the browser forward button.
+
+
+// -------------------- JAVASCRIPT KEYBOARD EVENTS --------------------
+
+// THREE MAIN KEYBOARD EVENTS
+  // keydown - fires when pressing a key and repeatedly while holding
+  // keyup - fires when you release a key 
+  // keypress - fires when you press a character like a, b, or c also repeatedly
+
+// HANDLING KEYBOARD EVENTS
+  // Select the element on which the keyboard event will fire. (text box)
+  // Use the element.addEventListener() to register an event handler
+  
+  // Text box: <input type="text" id="message">
+
+  // How to register keyboard event listeners:
+  // let msg = document.getElementById("#message");
+  
+  // msg.addEventListener("keydown", (event) => {
+    //      handle keydown
+    // });
+  
+  // msg.addEventListener("keypress", (event) => {
+    //      handle keypress
+    // });
+  
+  // msg.addEventListener("keyup", (event) => {
+    //      handle keyup
+    // });
+  
+  // if you press a character key, all three event handlers will be called.
+
+// THE KEYBOARD EVENT PROPERTIES
+  // Two important properties key and code.
+  // Key returns the character that has been pressed
+  // Code returns the physical key code
+  // If you press z the event.key returns z and event.code returns KeyZ
