@@ -4,6 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple DOM example</title>
+    <style>
+      .highlight {
+        color: white;
+        background-color: black;
+        padding: 10px;
+        width: 250px;
+        text-align: center:
+      }
+    </style>
   </head>
   <body>
       <section>
@@ -27,6 +36,23 @@
 
       const linkPara = document.querySelector("p");
       linkPara.appendChild(text);
+
+      // sect.appendChild(linkPara); // Moves the <p> down to the bottom of the section
+
+      
+      // sect.removeChild(linkPara); // Removing a node with a reference to the node and it's parent
+
+      // Removing a node based only on a reference to itself
+      // linkPara.remove();
+
+    // Adding a <style> <style> to the HTML <head>
+      // para.style.color = "white";
+      // para.style.backgroundColor = "black";
+      // para.style.padding = "10px";
+      // para.style.width = "250px";
+      // para.style.textAlign = "center";
+
+      para.classList.add("highlight");
     </script>
   </body>
 </html>
