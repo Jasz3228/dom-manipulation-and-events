@@ -31,6 +31,35 @@
     </ul>
 
     <script>
+      // Variables to hold our references
+      const items = document.querySelector("ul");
+      const itemName = document.querySelector("#item");
+      const addItem = document.querySelector("button");
+
+      // function to run in response to add item being clicked
+      addItem.addEventListener("click", (e) => {
+        e.preventDefault(); // Prevents the page from refreshing when enter is pressed
+        let inputValue = itemName.value;
+        itemName.value = ""; // Clears the input box.
+        
+        const list = document.createElement("li");
+        const span = document.createElement("span");
+        const btn = document.createElement("button")
+
+        list.appendChild(span);
+        list.appendChild(btn);
+        span.textContent = inputValue;
+        btn.textContent = "Delete";
+        items.appendChild(list);
+
+        itemName.focus(); // Refocus on the input field to continue typing items
+
+        btn.addEventListener("click", () => {
+          list.remove(); // Function to delete items from the list.
+        });
+      });
+
+
 
     </script>
   </body>
