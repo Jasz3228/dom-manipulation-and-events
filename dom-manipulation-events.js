@@ -246,7 +246,7 @@
   
   // wheel event
     // Fires when the user scrolls the mouse wheel
-      // Example - element.addEventListener("wheel", e => console.log(e.deltay));
+      // Example - element.addEventListener("wheel", e => console.log(e.delay));
 
   // mouseover
     // when the pointer enters the element -- It bubbles
@@ -401,7 +401,7 @@
 // This function highlights an element by changing its background color to yellow
 
 // function highlight(elem) {
-//     elem.style.backgroundColor = "Yello";
+//     elem.style.backgroundColor = "Yellow";
 //  }
 
 // to execute a piece of code after highlighting the element you may come up with a callback
